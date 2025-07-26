@@ -1,0 +1,126 @@
+body {
+    font-family: "Anuphan", sans-serif;
+    background-color: #00809D;
+}
+
+h1 {
+    text-align: center;
+    color: #FFD700;
+    font-size: 35px;
+}
+
+.index {
+    background-color: #FCF8DD;
+    width: 60%;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h3 {
+    margin-top: 20px;
+    color: #333;
+}
+
+p {
+    margin-left: 40px;
+    line-height: 1.6;
+}
+
+.Profile {
+    background-color: #FCF8DD;
+    border-radius: 10px;
+    width: 50%;
+    font-size: 20px;
+    text-align: left;
+    padding: 15px;
+    margin: 0 auto;
+}
+
+.Profile .label {
+    font-weight: 800;
+}
+
+.box {
+    display: flex;
+    justify-content: center; 
+    align-items: center;              
+    gap: 20px;                
+    padding: 20px;
+}
+
+.gallery {
+    margin: 10px;
+    border: 5px solid #FDF5AA;
+    width: 400px; 
+    height: 300px;   
+    border-radius: 10px;
+}
+
+.gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    border-radius: 10px;
+}
+
+.box-lable {
+    font-size: 20px;
+    background-color: #FCF8DD;
+    width: 50%;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 0 auto;
+    text-align: left;
+}
+ 
+.box-lable .label{
+    font-weight: 800;
+}
+
+.sub-table{
+    margin: 25px auto;
+    width: 70%;
+    padding: 30px;     
+}
+
+table {
+    width: 100%;
+    /* height: 250px; */
+    font-size: 20px;
+    border-collapse: collapse;
+    border-radius: 10px;
+    border-radius: 12px; 
+    overflow: hidden;    
+}
+
+th,td {
+    border: 2px solid #aaa; 
+    background-color: #F5F7F8;
+    margin: 0 auto;
+    height: 35px;
+}
+
+th {
+    font-size: 18px;
+    font-weight: 700;
+    color: #333;
+    background-color: #EEEEEE;
+}
+
+td {
+    font-size: 16px;
+    text-align: center;
+    color: #758694;
+}
+
+.subject {
+    text-align: left;
+    padding-left: 10px;
+}
+
+
+
+    
