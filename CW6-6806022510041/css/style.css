@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-areas:
+    'header header header header header'
+    'navbar navbar navbar navbar navbar'
+    'content content content content sidebar'
+    'footer footer footer footer footer';
+}
+
+.header {
+    grid-area: header;
+    background-color: #9FB3DF;
+    padding: 50px;
+    text-align: center;
+    font-size: 35px;
+}
+
+.navbar {
+    grid-area: navbar;
+    height: 50px;
+    background-color: #23486A;
+    display: flex;              /* ใช้ flex เพื่อจัด layout ลิงก์ */
+    align-items: center;        /* จัดให้อยู่กลางแนวตั้ง */
+    padding: 0 16px;            /* padding ซ้าย–ขวา */
+}
+
+.navbar a {
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+    padding: 0 16px;         /* เว้นด้านซ้าย–ขวา */
+    height: 100%;               /* ให้เต็มความสูงของ navbar */
+    display: flex;              /* ใช้ flex ภายใน <a> */
+    align-items: center;        /* กึ่งกลางแนวตั้ง */
+    font-weight: 700;
+}
+
+.navbar a:hover {
+    background-color: #F0F0F0;
+    font-weight: 700;
+    color: #000000;
+}
+
+.navbar input {
+    margin-left: auto;
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: none;
+    width: 200px;  /* กำหนดความกว้าง search */
+}
+
+.navbar button {
+    margin-left: 5px;
+    padding: 8px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: none;
+    background-color: #4863A0;
+    color: #ffffff;
+    font-weight: 700;
+}
+
+.navbar button:hover {
+    background-color: #98AFC7;
+}
+
+.sidebar {
+    grid-area: sidebar;
+    height: 600px;
+    background-color: #D9EAFD;
+}
+
+.sidebar a {
+    display: block;               /* ทำให้ลิงก์เรียงเป็นแนวตั้ง */
+    padding: 10px 15px;           /* ขนาดปุ่ม */
+    margin: 15px 10px 15px 10px;  /* บน ขวา ล่าง ซ้าย */
+    text-decoration: none;        /* เอาเส้นใต้ออก */
+    color: white;                 /* สีตัวอักษร */
+    border: none;      /* กรอบสีขาว */
+    border-radius: 5px;           /* มุมโค้ง */
+    text-align: center;           /* ตัวอักษรอยู่กึ่งกลาง */
+    background-color: #3674B5;    /* สีพื้นปุ่ม */
+    transition: 0.3s;             /* เพิ่ม transition เวลา hover */
+    cursor: pointer;
+}
+
+.content {
+    grid-area: content;
+    background-color: #F8FAFC;
+    overflow: hidden;
+    padding: 20px;
+}
+
+.content table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.content td,th {
+    border: 2px solid #000000;
+    padding: 15px;  /*  เพิ่มระยะห่างด้านใน cell ให้ดูสวย */
+    text-align: left;
+}
+
+.content th {
+    color: #ffffff;
+}
+
+.content thead {
+    background-color: #6482AD;
+}
+
+.content tfoot {
+    background-color: #6482AD;
+}
+
+.gallery {
+    display: flex;
+    justify-content: left; /* จัดให้อยู่ทางซ้าย */
+    gap: 30px;               /* ระยะห่างระหว่างรูป */
+}
+
+.gallery img {
+    width: 300px;  /* หรือ % ตามที่ต้องการ */
+    height: auto;
+    border-radius: 10px;
+}
+
+.map {
+    width: 100%;          /* พอดีกับ content */
+    height: 450px;        /* ปรับสูงตามต้องการ */
+    border: 0;            /* เอาขอบออก */
+    border-radius: 10px;  /* มุมโค้งเหมือนรูป */
+}
+
+.register-form input {
+    width: 500px;  /* หรือกำหนดความกว้างสูงสุด */
+    height: 30px;      /* ความสูงของช่องกรอก */
+    padding: 0 10px;   /* ระยะห่างด้านในซ้าย–ขวา */
+    margin: 6px;
+    border: 1px solid #999;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.register-form input:focus {
+    border-color: #3674B5;   /* ขอบสีน้ำเงิน */
+    box-shadow: 0 0 5px rgba(54, 116, 181, 0.5); /* เงา */
+    outline: none;
+}
+
+.register-form label{
+    font-weight: 700;
+    margin: 6px;
+}
+
+.register-form button {
+    display: block;       /* ทำให้ปุ่มอยู่บรรทัดใหม่ */
+    margin: 10px 5px;
+    border: 2px;
+    border-radius: 4px;
+    width: 500px;  /* หรือกำหนดความกว้างสูงสุด */
+    height: 30px;      /* ความสูงของช่องกรอก */
+}
+
+.submit-btn {
+    background-color: #2B547E;
+    color: white;
+}
+
+.submit-btn:hover {
+    background-color: #4863A0;
+}
+
+.reset-btn {
+    background-color: #B21807;
+    color: #ffffff;
+}
+
+.reset-btn:hover {
+    background-color: #C83F49;
+    color: #ffffff;
+}
+
+.footer {
+    grid-area: footer;
+    background-color: #9FB3DF;
+    padding: 10px;
+    text-align: center;
+    font-size: 20px;
+}
